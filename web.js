@@ -7,7 +7,7 @@ var indexString = indexBuffer.toString('utf-8');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  response.send(indexString);
+  response.send('Hello World 2!');
 });
 
 var port = process.env.PORT || 5000;
