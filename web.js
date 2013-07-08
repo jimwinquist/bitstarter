@@ -1,5 +1,7 @@
 var express = require('express');
 
+var fs = require('fs');
+
 var indexBuffer = fs.readFile(index.html);
 
 var indexString = indexBuffer.toString('utf-8');
@@ -7,7 +9,7 @@ var indexString = indexBuffer.toString('utf-8');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  response.send('Hello World 2!');
+  response.send(indexString);
 });
 
 var port = process.env.PORT || 5000;
